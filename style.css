@@ -210,22 +210,8 @@ nav.desktop a.active {
 }
 
 /* ===== About Section ===== */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-.about-grid .article-image {
-  width: 200px;
-  height: 200px;
-  background-color: #e9ecef;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  justify-self: center;
-}
-.about-grid .article-content {
-  text-align: left;
+.article-content {
+  text-align: center;
 }
 .connect-btns a {
   display: inline-block;
