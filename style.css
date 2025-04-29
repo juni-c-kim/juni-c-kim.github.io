@@ -1,4 +1,4 @@
-/* style.css - Complete styling for all pages (updated for Pinyon Script) */
+/* style.css - Compact styling for all pages (updated sizes) */
 
 /* ===== Global Reset & Base ===== */
 * {
@@ -53,12 +53,9 @@ header .container {
   align-items: center;
   height: 4rem;
 }
-nav.desktop {
-  display: none;
-}
 nav.desktop a {
+  font-size: 0.75rem; /* reduced from 0.875rem */
   margin-left: 2rem;
-  font-size: 0.875rem;
   font-weight: 300;
   letter-spacing: 0.05em;
   color: rgba(0, 0, 0, 0.6);
@@ -68,27 +65,10 @@ nav.desktop a:hover,
 nav.desktop a.active {
   color: #212529;
 }
-nav.mobile {
-  display: none;
-  flex-direction: column;
-  border-top: 1px solid #e9ecef;
-}
-nav.mobile a {
-  padding: 0.75rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 300;
-  letter-spacing: 0.05em;
-  color: rgba(0, 0, 0, 0.6);
-  transition: color 0.2s;
-}
-nav.mobile a:hover,
-nav.mobile a.active {
-  color: #212529;
-}
 
 /* ===== Section Spacing ===== */
 .section {
-  padding: 4rem 1rem;
+  padding: 3rem 1rem; /* reduced from 4rem */
 }
 
 /* ===== Home/Profile Section ===== */
@@ -101,12 +81,12 @@ nav.mobile a.active {
   text-align: center;
 }
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 120px;  /* reduced from 150px */
+  height: 120px;
   border-radius: 50%;
   background-color: #e9ecef;
   overflow: hidden;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem; /* reduced from 3rem */
 }
 .profile-pic img {
   width: 100%;
@@ -115,19 +95,18 @@ nav.mobile a.active {
   border-radius: 50%;
 }
 .greeting {
-  font-size: 3.5rem;
+  font-size: 2.5rem; /* reduced from 3.5rem */
   font-weight: 300;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem; /* reduced from 1rem */
 }
 .name {
-  font-family: 'Pinyon Script', cursive; /* keeps your chosen font */
-  font-size: 4rem;  /* bump this up or down as you like */
+  font-size: 3rem; /* added: size of "Juni Kim" */
+  /* Pinyon Script applied via .pinyon-script-regular class */
 }
-
 .bio {
-  max-width: 800px;
+  max-width: 600px; /* reduced from 800px */
   color: #495057;
-  font-size: 1.2rem;
+  font-size: 1rem; /* reduced from 1.2rem */
   line-height: 1.5;
 }
 .highlight {
