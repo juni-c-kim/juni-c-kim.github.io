@@ -211,15 +211,15 @@ nav.desktop a.active {
 
 /* ===== About Section ===== */
 /* Ensure about page content is centered and constrained */
-section#about {
+section#aboutme {
   padding: 3rem 1rem;
   text-align: center;
 }
-section#about h2 {
+section#aboutme h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-section#about .about-text {
+section#aboutme .about-text {
   max-width: 600px;
   margin: 0 auto 2rem;
   color: #495057;
@@ -227,10 +227,10 @@ section#about .about-text {
   line-height: 1.5;
   text-align: center;
 }
-section#about .connect {
+section#aboutme .connect {
   text-align: center;
 }
-section#about .connect a {
+section#aboutme .connect a {
   display: inline-block;
   margin: 0 0.5rem;
   padding: 0.5rem 1rem;
