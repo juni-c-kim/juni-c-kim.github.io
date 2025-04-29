@@ -1,4 +1,6 @@
 /* style.css - Complete styling for all pages */
+/* ===== Import Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Your+Font+Name:wght@400;700&display=swap');
 
 /* ===== Global Reset & Base ===== */
 * {
@@ -124,8 +126,7 @@ nav.mobile a.active {
   margin-bottom: 1rem;
 }
 .name {
-  font-family: serif;
-  font-style: italic;
+  font-family: 'Pinyon Script', serif;
 }
 .bio {
   max-width: 800px;
