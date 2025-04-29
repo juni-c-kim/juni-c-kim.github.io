@@ -227,6 +227,18 @@ section#about .about-text {
   line-height: 1.5;
   text-align: center;
 }
+section#about .connect {
+  text-align: center;
+}
+section#about .connect a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+}
 
 /* ===== Responsive ===== */
 @media (min-width: 768px) {
