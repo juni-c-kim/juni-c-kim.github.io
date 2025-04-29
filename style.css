@@ -1,6 +1,4 @@
-/* style.css - Complete styling for all pages */
-/* ===== Import Google Font ===== */
-@import url('https://fonts.googleapis.com/css2?family=Your+Font+Name:wght@400;700&display=swap');
+/* style.css - Complete styling for all pages (updated for Pinyon Script) */
 
 /* ===== Global Reset & Base ===== */
 * {
@@ -22,6 +20,13 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+
+/* ===== Google Font Class ===== */
+.pinyon-script-regular {
+  font-family: 'Pinyon Script', cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* ===== Container ===== */
@@ -126,9 +131,7 @@ nav.mobile a.active {
   margin-bottom: 1rem;
 }
 .name {
-  font-family: "Pinyon Script", cursive;
-  font-weight: 400;
-  font-style: normal;
+  /* If .pinyon-script-regular is applied, it takes effect here */
 }
 .bio {
   max-width: 800px;
