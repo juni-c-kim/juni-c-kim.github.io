@@ -120,6 +120,7 @@ nav.mobile a.active {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 50%;    /* ensure circular crop */
 }
 .greeting {
   font-size: 3.5rem;
