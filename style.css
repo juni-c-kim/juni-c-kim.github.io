@@ -131,8 +131,12 @@ nav.mobile a.active {
   margin-bottom: 1rem;
 }
 .name {
-  /* If .pinyon-script-regular is applied, it takes effect here */
+  font-family: 'Pinyon Script', cursive; /* keeps your chosen font */
+  font-weight: 100;
+  font-style: normal;
+  font-size: 4rem;  /* bump this up or down as you like */
 }
+
 .bio {
   max-width: 800px;
   color: #495057;
