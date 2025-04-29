@@ -1,11 +1,12 @@
-/* style.css - Shared styles for all pages */
+/* style.css - Complete styling for all pages */
 
 /* ===== Global Reset & Base ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 body {
   background-color: #f8f9fa;
@@ -30,19 +31,14 @@ img {
 
 /* ===== Header & Navigation ===== */
 header {
+  display: flex;
+  flex-direction: column;
   border-bottom: 1px solid #e9ecef;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 50;
-}
-header .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 4rem;
 }
 header .container {
   display: flex;
@@ -53,6 +49,7 @@ header .container {
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
+  font-style: italic;
 }
 nav.desktop {
   display: none;
@@ -62,7 +59,7 @@ nav.desktop a {
   font-size: 0.875rem;
   font-weight: 300;
   letter-spacing: 0.05em;
-  color: rgba(0,0,0,0.6);
+  color: rgba(0, 0, 0, 0.6);
   transition: color 0.2s;
 }
 nav.desktop a:hover,
@@ -85,7 +82,7 @@ nav.mobile a {
   font-size: 0.875rem;
   font-weight: 300;
   letter-spacing: 0.05em;
-  color: rgba(0,0,0,0.6);
+  color: rgba(0, 0, 0, 0.6);
   transition: color 0.2s;
 }
 nav.mobile a:hover,
@@ -107,9 +104,19 @@ nav.mobile a.active {
   height: calc(100vh - 4rem);
   text-align: center;
 }
-.profile-img {
+.profile-pic {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  /* width/height are inherited from the wrapper’s w-24 h-24 */
+  background-color: #e9ecef;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 .greeting {
   font-size: 3.5rem;
@@ -135,7 +142,7 @@ nav.mobile a.active {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   margin-bottom: 2rem;
 }
 .profile-text {
@@ -149,7 +156,7 @@ nav.mobile a.active {
   padding: 0.75rem 1.5rem;
   background-color: #fff;
   border-radius: 2rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   font-weight: 500;
 }
 .section-title {
@@ -202,7 +209,7 @@ nav.mobile a.active {
   background-color: #fff;
   padding: 1rem;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 .article-image {
   background-color: #e9ecef;
@@ -250,7 +257,7 @@ nav.mobile a.active {
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   font-weight: 500;
 }
 
