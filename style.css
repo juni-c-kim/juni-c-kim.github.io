@@ -25,7 +25,7 @@ img {
 /* ===== Google Font Class ===== */
 .pinyon-script-regular {
   font-family: 'Pinyon Script', cursive;
-  font-weight: 1000;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -132,7 +132,7 @@ nav.mobile a.active {
 }
 .name {
   font-family: 'Pinyon Script', cursive; /* keeps your chosen font */
-  font-size: 4rem;  /* bump this up or down as you like */
+  font-size: 6rem;  /* bump this up or down as you like */
 }
 
 .bio {
