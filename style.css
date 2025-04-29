@@ -1,4 +1,4 @@
-/* style.css - Compact styling for all pages (updated sizes) */
+/* style.css - Compact styling for all pages (updated sizes & about section fix) */
 
 /* ===== Global Reset & Base ===== */
 * {
@@ -100,7 +100,7 @@ nav.desktop a.active {
   margin-bottom: 0.75rem; /* reduced from 1rem */
 }
 .name {
-  font-size: 3rem; /* added: size of "Juni Kim" */
+  font-size: 3rem; /* size of "Juni Kim" */
   /* Pinyon Script applied via .pinyon-script-regular class */
 }
 .bio {
@@ -210,12 +210,29 @@ nav.desktop a.active {
 }
 
 /* ===== About Section ===== */
-.article-content {
+/* Ensure about page content is centered and constrained */
+section#about {
+  padding: 3rem 1rem;
   text-align: center;
 }
-.connect-btns a {
+section#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+section#about .about-text {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #495057;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+section#about .connect {
+  text-align: center;
+}
+section#about .connect a {
   display: inline-block;
-  margin-right: 0.5rem;
+  margin: 0 0.5rem;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   background-color: #fff;
@@ -226,7 +243,9 @@ nav.desktop a.active {
 /* ===== Responsive ===== */
 @media (min-width: 768px) {
   nav.desktop { display: flex; }
-  nav.mobile { display: none; }
   .writing-grid { grid-template-columns: repeat(2, 1fr); }
+  section#about .about-text { text-align: left; }
+  section#about { text-align: left; }
+  section#about .connect { text-align: left; }
   .about-grid { grid-template-columns: 200px 1fr; }
 }
