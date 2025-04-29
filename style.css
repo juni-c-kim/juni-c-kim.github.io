@@ -130,7 +130,7 @@ nav.mobile a.active {
 }
 .name {
   font-family: 'Pinyon Script', cursive; /* keeps your chosen font */
-  font-size: 2rem;  /* bump this up or down as you like */
+  font-size: 4rem;  /* bump this up or down as you like */
 }
 
 .bio {
