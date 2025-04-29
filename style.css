@@ -228,7 +228,7 @@ body > .article-content {
   line-height: 1.6;
 
   /* center align text */
-  text-align: center;
+  text-align: center !important;
   padding: 0 1rem;
 }
 
