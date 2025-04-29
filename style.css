@@ -53,9 +53,6 @@ header .container {
   align-items: center;
   height: 4rem;
 }
-.logo {
-  font-size: 1.8rem;
-}
 nav.desktop {
   display: none;
 }
