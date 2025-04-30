@@ -150,50 +150,51 @@ nav.mobile {
   margin-bottom: 0.5rem;
 }
 
-
 /* ===== Writing Section (writing.html) ===== */
 .writing-grid {
-  /* stack articles vertically, with extra space between */
   display: flex;
   flex-direction: column;
-  gap: 3rem;            /* more vertical space */
-  margin: 2rem auto;    /* vertical margin; auto‐centers within .container */
-  max-width: 800px;     /* match your other pages’ width */
+  gap: 3rem;          /* vertical space between posts */
+  margin: 2rem auto;  /* match other pages’ left/right margins */
+  max-width: 800px;   /* keep it from getting too wide */
 }
 
 .writing-grid .article {
   display: flex;
+  flex-direction: row;        /* default: image on left, text on right */
   align-items: center;
   gap: 1.5rem;
-  
-  /* remove the box look */
-  background: none;
+
+  background: none;           /* remove box */
   box-shadow: none;
   border-radius: 0;
-  padding: 0;
   
-  /* very thin divider line */
+  padding: 0 0 1rem;          /* bottom padding above divider */
   border-bottom: 1px solid #e9ecef;
-  padding-bottom: 1rem; /* padding under content so line isn’t jammed */
 }
 
-/* no divider on very last item */
 .writing-grid .article:last-child {
-  border-bottom: none;
+  border-bottom: none;        /* no divider on last item */
 }
 
-/* let image & text each take half the space */
+/* ↔️ Zig-zag: flip image/text on every even post */
+.writing-grid .article:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* ensure image and content each take half */
 .writing-grid .article-image,
 .writing-grid .article-content {
   flex: 1;
 }
 
-/* responsive: stack on small screens */
+/* Responsive: stack vertically under tablet */
 @media (max-width: 767px) {
   .writing-grid .article {
     flex-direction: column;
   }
 }
+
 
 /* ===== About Me Section (aboutme.html) ===== */
 .article-content.about {
