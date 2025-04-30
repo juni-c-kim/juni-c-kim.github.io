@@ -205,7 +205,6 @@ nav.mobile {
   flex: 0 0 350px;
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  border-radius: 0.5rem;
   background-color: #e9ecef;
 }
 .writing-grid .article-image img {
