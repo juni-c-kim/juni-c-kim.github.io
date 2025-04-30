@@ -214,6 +214,28 @@ nav.mobile {
 }
 
 /* ===== About Me Section (aboutme.html) ===== */
+.article-content.about {
+  /* fill viewport minus header and center content */
+  height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  color: #495057;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center !important;
+}
+.article-content.about p {
+  margin-bottom: 1.5rem;
+}
+.article-content.about p:last-child {
+  margin-bottom: 0;
+}
+
 body.aboutme .article-content {
   /* fill viewport minus header and center content */
   height: calc(100vh - 4rem);
