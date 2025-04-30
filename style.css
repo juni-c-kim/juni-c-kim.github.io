@@ -153,34 +153,42 @@ nav.mobile {
 
 /* ===== Writing Section (writing.html) ===== */
 .writing-grid {
+  /* stack articles vertically, with extra space between */
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 3rem;            /* more vertical space */
+  margin: 2rem auto;    /* vertical margin; auto‐centers within .container */
+  max-width: 800px;     /* match your other pages’ width */
 }
 
 .writing-grid .article {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  
+  /* remove the box look */
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  
+  /* very thin divider line */
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1rem; /* padding under content so line isn’t jammed */
 }
 
-/* make image and text each take half */
+/* no divider on very last item */
+.writing-grid .article:last-child {
+  border-bottom: none;
+}
+
+/* let image & text each take half the space */
 .writing-grid .article-image,
 .writing-grid .article-content {
   flex: 1;
 }
 
-/* flip layout on every even card */
-.writing-grid .article:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-/* stack vertically under tablet width */
+/* responsive: stack on small screens */
 @media (max-width: 767px) {
   .writing-grid .article {
     flex-direction: column;
