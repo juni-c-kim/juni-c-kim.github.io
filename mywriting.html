@@ -3,48 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juni Kim – My Writing</title>
+  <title>Juni Kim – Resume</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Site Header -->
+  <!-- Site Header (same as index.html) -->
   <header>
     <div class="container">
       <nav class="desktop">
         <a href="index.html">Home</a>
-        <a href="resume.html">Resume</a>
-        <a href="writing.html" class="active">My Writing</a>
+        <a href="resume.html" class="active">Resume</a>
+        <a href="writing.html">My Writing</a>
         <a href="aboutme.html">About</a>
       </nav>
     </div>
     <nav class="mobile">
       <a href="index.html">Home</a>
-      <a href="resume.html">Resume</a>
-      <a href="writing.html" class="active">My Writing</a>
+      <a href="resume.html" class="active">Resume</a>
+      <a href="writing.html">My Writing</a>
       <a href="aboutme.html">About Me</a>
     </nav>
   </header>
 
-  <!-- Writing Gallery -->
+  <!-- Resume Section -->
   <main class="section">
-    <h2 class="section-title">My Writing</h2>
-    <div class="writing-grid">
-      <!-- Repeat this block for each piece -->
-      <div class="article">
-        <div class="article-image">
-          <img src="assets/thumb1.jpg" alt="The Art of Mindful Writing">
-        </div>
-        <div class="article-content">
-          <p class="article-platform">Medium • Creativity</p>
-          <h3 class="article-title">The Art of Mindful Writing</h3>
-          <p>A brief exploration of how mindfulness can enhance your writing flow.</p>
-        </div>
+    <h2 class="section-title">Resume</h2>
+    <div class="resume-header">
+      <div class="profile-text">
+        <h3>Profile</h3>
+        <p>Detail-oriented analyst and AI prompt engineer with a flair for weaving technical writing and creative storytelling. Built website narratives for AI Paralegal, Visyfy, and ReQuant. Passionate about turning complex workflows into clear, engaging content.</p>
       </div>
-      <!-- end block -->
-      <!-- Add more .article blocks as needed -->
+      <a href="assets/JuniKim-Resume.pdf" class="download-btn">Download PDF</a>
+    </div>
+
+    <div class="experience">
+      <h3 class="section-title">Experience</h3>
+
+      <!-- Quality Control Manager -->
+      <div class="experience-item">
+        <div>
+          <p class="job-title">Quality Control Manager</p>
+          <strong>Core Responsibilities</strong>
+          <ul class="job-details">
+            <li>Designed and executed end-to-end QA plans for an Android movie-translation app, covering UI, audio sync, and dialect handling.</li>
+            <li>Logged, prioritized, and tracked defects with clear reproduction steps; partnered with developers to verify fixes.</li>
+          </ul>
+          <strong>Process & Documentation</strong>
+          <ul class="job-details">
+            <li>Created a living library of test scripts and checklists that scaled as features grew.</li>
+            <li>Authored “How-We-Test” guides and onboarding docs that became the team’s go-to reference.</li>
+          </ul>
+        </div>
+        <div class="job-date">Apr 2024 – Present</div>
+      </div>
+
+      <!-- Prompt Engineer -->
+      <div class="experience-item">
+        <div>
+          <p class="job-title">Prompt Engineer</p>
+          <strong>Prompt Development</strong>
+          <ul class="job-details">
+            <li>Transformed raw call transcripts into modular prompts that drive natural, on‑brand AI conversations.</li>
+            <li>Ran rapid A/B tests to iterate phrasing, system instructions, and fallback logic.</li>
+          </ul>
+          <strong>Collaboration</strong>
+          <ul class="job-details">
+            <li>Embedded prompt logic into product specs alongside UX designers and engineers.</li>
+            <li>Analyzed conversation KPIs—like response time and escalation triggers—to inform refinements.</li>
+          </ul>
+        </div>
+        <div class="job-date">Mar 2024 – Present</div>
+      </div>
+
+      <!-- Product Strategist & Technical Writer -->
+      <div class="experience-item">
+        <div>
+          <p class="job-title">Product Strategist & Technical Writer</p>
+          <strong>Workflow Mapping</strong>
+          <ul class="job-details">
+            <li>Mapped multi-step healthcare and policy processes in Figma, then translated them into Asana tasks.</li>
+            <li>Facilitated alignment sessions with clinicians, compliance officers, and engineers to capture every use case.</li>
+          </ul>
+          <strong>Content Strategy</strong>
+          <ul class="job-details">
+            <li>Wrote website copy for three flagship platforms—an AI paralegal suite, a patient-engagement tool, and an AI demo—focusing on user outcomes.</li>
+            <li>Drafted compliance-grade policy and procedure documents for an assisted-living network, balancing precision with clarity.</li>
+          </ul>
+        </div>
+        <div class="job-date">Jun 2023 – Present</div>
+      </div>
+
+      <!-- Product Manager -->
+      <div class="experience-item">
+        <div>
+          <p class="job-title">Product Manager</p>
+          <strong>Vision & Roadmap</strong>
+          <ul class="job-details">
+            <li>Defined end-to-end product strategy for SMS/voice AI digital employees in healthcare, hospitality, and casino sectors.</li>
+            <li>Built a prioritization framework balancing business impact, technical feasibility, and user delight.</li>
+          </ul>
+          <strong>Data-Driven Iteration & Story</strong>
+          <ul class="job-details">
+            <li>Integrated QA reports, prompt analytics, and user feedback into a unified dashboard for continuous improvement.</li>
+            <li>Crafted positioning decks and marketing copy that turn complex AI workflows into clear, human-centered value stories.</li>
+          </ul>
+        </div>
+        <div class="job-date">Jan 2025 – Present</div>
+      </div>
+
     </div>
   </main>
-
 </body>
 </html>
