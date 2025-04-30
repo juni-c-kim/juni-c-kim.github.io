@@ -150,50 +150,53 @@ nav.mobile {
   margin-bottom: 0.5rem;
 }
 
-/* ===== Writing Section (writing.html) ===== */
+/* ——————————————————————————————————————————————
+   Writing Section: make images big, square & punchy
+   —————————————————————————————————————————————— */
 .writing-grid {
   display: flex;
   flex-direction: column;
-  gap: 3rem;          /* vertical space between posts */
-  margin: 2rem auto;  /* match other pages’ left/right margins */
-  max-width: 800px;   /* keep it from getting too wide */
+  gap: 3rem;           /* more vertical space between items */
+  margin-top: 2rem;
 }
 
 .writing-grid .article {
   display: flex;
-  flex-direction: row;        /* default: image on left, text on right */
   align-items: center;
-  gap: 1.5rem;
-
-  background: none;           /* remove box */
+  gap: 2rem;
+  /* remove the white box background */
+  background: none;
   box-shadow: none;
-  border-radius: 0;
-  
-  padding: 0 0 1rem;          /* bottom padding above divider */
-  border-bottom: 1px solid #e9ecef;
+  padding: 0;
 }
 
-.writing-grid .article:last-child {
-  border-bottom: none;        /* no divider on last item */
+.writing-grid .article-image {
+  /* fixed square, adjust as you like */
+  flex: 0 0 350px;     /* image always 350px wide */
+  aspect-ratio: 1 / 1; /* force 1:1 height */
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: #e9ecef;
 }
 
-/* ↔️ Zig-zag: flip image/text on every even post */
-.writing-grid .article:nth-child(even) {
-  flex-direction: row-reverse;
+.writing-grid .article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* ensure image and content each take half */
-.writing-grid .article-image,
 .writing-grid .article-content {
+  /* make the text take up the remaining space */
   flex: 1;
+  padding-top: 0.5rem; /* align content vertically with image center */
 }
 
-/* Responsive: stack vertically under tablet */
-@media (max-width: 767px) {
-  .writing-grid .article {
-    flex-direction: column;
-  }
+/* ensure the entire grid sits nicely within your page margins */
+main.section .container {
+  max-width: 900px;
+  margin: 0 auto;
 }
+
 
 
 /* ===== About Me Section (aboutme.html) ===== */
