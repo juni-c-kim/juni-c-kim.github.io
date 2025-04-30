@@ -1,6 +1,6 @@
 /* style.css - Unified styling for index.html, resume.html, writing.html, and aboutme.html */
 
-/* ===== Global Reset & Base ===== */ 
+/* ===== Global Reset & Base ===== */
 * {
   margin: 0;
   padding: 0;
@@ -122,6 +122,10 @@ nav.mobile {
   text-align: center;
 }
 .experience-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 1rem;
   margin-bottom: 3rem;
 }
 .experience-item p.job-title {
@@ -132,9 +136,9 @@ nav.mobile {
   letter-spacing: 0.05em;
 }
 .experience-item strong {
-  display: inline-block;
+  display: block;
   position: relative;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   padding-left: 1.5rem;
   font-size: 1rem;
   font-weight: 300;
@@ -143,15 +147,15 @@ nav.mobile {
   content: "";
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 3rem;
+  width: 100vw; /* extend full viewport width */
   height: 1px;
   background: #212529;
+  z-index: -1;
 }
 .job-date {
   color: #6c757d;
-  text-align: right;
+  justify-self: end;
+  align-self: start;
 }
 .job-details {
   list-style: disc;
@@ -162,7 +166,9 @@ nav.mobile {
   margin-bottom: 0.5rem;
 }
 
-/* ===== Writing Section (writing.html) ===== */
+/* ——————————————————————————————————————————————
+   Writing Section: make images big, square & punchy
+   —————————————————————————————————————————————— */
 .writing-grid {
   display: flex;
   flex-direction: column;
