@@ -117,58 +117,65 @@ nav.mobile {
 /* ===== Resume Section (resume.html) ===== */
 .section-title {
   font-size: 2rem;
-  margin: 2rem 0 2rem;
+  margin: 2rem 0 3rem;
   font-weight: 300;
   text-align: center;
 }
 .experience-item {
   display: grid;
+  grid-template-areas:
+    "title date"
+    "subtitle date"
+    "details date";
   grid-template-columns: 1fr auto;
-  align-items: start;
-  gap: 1rem;
+  gap: 1rem 2rem;
   margin-bottom: 3rem;
 }
 .experience-item p.job-title {
+  grid-area: title;
   font-size: 0.875rem;
   font-weight: 500;
-  margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  margin: 0;
+}
+.experience-item .job-date {
+  grid-area: date;
+  color: #6c757d;
+  align-self: start;
+  justify-self: end;
 }
 .experience-item strong {
-  display: block;
+  grid-area: subtitle;
   position: relative;
-  margin-top: 0.5rem;
   padding-left: 1.5rem;
   font-size: 1rem;
   font-weight: 300;
+  margin: 0.5rem 0 0;
 }
 .experience-item strong::before {
   content: "";
   position: absolute;
   left: 0;
-  width: 100vw; /* extend full viewport width */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100vw;
+  max-width: calc(100% - 1.5rem);
   height: 1px;
   background: #212529;
   z-index: -1;
 }
-.job-date {
-  color: #6c757d;
-  justify-self: end;
-  align-self: start;
-}
-.job-details {
+.experience-item ul.job-details {
+  grid-area: details;
   list-style: disc;
   margin-left: 1.5rem;
   color: #495057;
 }
-.job-details li {
+.experience-item ul.job-details li {
   margin-bottom: 0.5rem;
 }
 
-/* ——————————————————————————————————————————————
-   Writing Section: make images big, square & punchy
-   —————————————————————————————————————————————— */
+/* ===== Writing Section (writing.html) ===== */
 .writing-grid {
   display: flex;
   flex-direction: column;
@@ -201,7 +208,21 @@ nav.mobile {
 }
 .writing-grid .article-content {
   flex: 1;
-  padding-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Title square */
+.writing-grid .article-content .article-title {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #e9ecef;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
 }
 .writing-grid > .article:nth-child(even) {
   flex-direction: row-reverse !important;
@@ -209,6 +230,11 @@ nav.mobile {
 @media (max-width: 767px) {
   .writing-grid .article {
     flex-direction: column !important;
+  }
+  .writing-grid .article-content .article-title {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
   }
 }
 main.section .container {
