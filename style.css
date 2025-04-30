@@ -79,14 +79,14 @@ main.section > .container {
   max-width: 800px;
 }
 
-.resume-header {
+body.resume .resume-header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 2rem;
 }
-.profile-text {
+body.resume .profile-text {
   flex: 1;
   min-width: 250px;
   color: #495057;
@@ -94,12 +94,12 @@ main.section > .container {
   line-height: 1.5;
 }
 
-.section-title {
+body.resume .section-title {
   font-size: 2rem;
   margin: 2rem 0 1rem;
   font-weight: 300;
 }
-.experience-item {
+body.resume .experience-item {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 1rem;
