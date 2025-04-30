@@ -292,6 +292,14 @@ body.aboutme main.section {
   justify-content: center;
 }
 
+body.aboutme .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 body.aboutme .article-content.about {
   display: flex;
   flex-direction: column;
@@ -306,17 +314,10 @@ body.aboutme .article-content.about {
   text-align: center;
 }
 
-/* Ensure container takes full height on about page */
-body.aboutme .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 body.aboutme .article-content.about p {
   margin-bottom: 1.5rem;
 }
+
 body.aboutme .article-content.about p:last-child {
   margin-bottom: 0;
 }
