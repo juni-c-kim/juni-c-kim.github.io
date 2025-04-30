@@ -199,7 +199,7 @@ main.section .container {
 }
 
 .writing-grid > .article:nth-child(even) {
-  flex-direction: row-reverse;
+  flex-direction: row-reverse !important;  /* force the flip */
 }
 
 /* ===== About Me Section (aboutme.html) ===== */
