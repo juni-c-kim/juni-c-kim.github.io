@@ -173,7 +173,7 @@ nav.mobile {
 }
 .experience-item ul.job-details {
   grid-area: details;
-  list-style: disc;
+  list-style: none;
   margin-left: 1.5rem;
   color: #495057;
   width: 100%; /* Ensure full width */
