@@ -197,7 +197,9 @@ main.section .container {
   margin: 0 auto;
 }
 
-
+.writing-grid > .article:nth-child(even) {
+  flex-direction: row-reverse;
+}
 
 /* ===== About Me Section (aboutme.html) ===== */
 .article-content.about {
