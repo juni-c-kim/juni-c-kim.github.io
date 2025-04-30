@@ -2,6 +2,7 @@
 
 :root {
   --page-padding: 1rem;
+  --mobile-padding: 1.5rem; /* Added mobile-specific padding */
 }
 
 /* ===== Global Reset & Base ===== */
@@ -79,26 +80,26 @@ nav.mobile {
 
 /* ===== Home/Profile Section (index.html) ===== */
 .profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: calc(100vh - 4rem);
-  text-align: center;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: calc(100vh - 4rem) !important;
+  text-align: center !important;
+  padding: 0 var(--page-padding);
 }
 .profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background-color: #e9ecef;
-  overflow: hidden;
-  margin-bottom: 2rem;
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  margin-bottom: 2rem !important;
 }
 .profile-pic img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
 }
 .greeting {
   font-size: 2.5rem;
@@ -175,6 +176,7 @@ nav.mobile {
   list-style: disc;
   margin-left: 1.5rem;
   color: #495057;
+  width: 100%; /* Ensure full width */
 }
 .experience-item ul.job-details li {
   margin-bottom: 0.5rem;
@@ -260,19 +262,6 @@ nav.mobile {
 .writing-grid > .article:nth-child(even) {
   flex-direction: row-reverse !important;
 }
-@media (max-width: 767px) {
-  .writing-grid .article {
-    flex-direction: column !important;
-  }
-  .writing-grid .article-content .article-title {
-    width: 250px;
-    height: 250px;
-    margin: 0 auto;
-  }
-  .writing-grid .article-content .article-title span {
-    font-size: 1rem;
-  }
-}
 main.section .container {
   max-width: 900px;
   margin: 0 auto;
@@ -307,6 +296,7 @@ body.aboutme main.section .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 var(--page-padding);
 }
 
 body.aboutme .article-content.about {
@@ -331,25 +321,173 @@ body.aboutme .article-content.about p:last-child {
   margin-bottom: 0;
 }
 
-/* ===== Home Profile Override ===== */
-.profile {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  height: calc(100vh - 4rem) !important;
-  text-align: center !important;
+/* ===== MEDIA QUERIES FOR MOBILE ===== */
+@media (max-width: 767px) {
+  :root {
+    --page-padding: 1.5rem; /* Increased padding for mobile */
+  }
+  
+  /* Global mobile adjustments */
+  .container {
+    padding: 0 var(--mobile-padding);
+  }
+  
+  .section {
+    padding: 2rem var(--mobile-padding);
+  }
+  
+  /* 1. Fix for writing page mobile layout */
+  .writing-grid .article {
+    flex-direction: column !important;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .writing-grid .article-image {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .writing-grid .article-content {
+    width: 100%;
+  }
+  
+  .writing-grid .article-content .article-title {
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    padding: 1rem 0;
+  }
+  
+  .writing-grid .article-content .article-title a {
+    padding: 0.5rem;
+  }
+  
+  .writing-grid .article-content .article-title span {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* 2. Fix for home page spacing */
+  .profile {
+    padding: 0 var(--mobile-padding) !important;
+  }
+  
+  .profile-pic {
+    width: 100px !important;
+    height: 100px !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .greeting {
+    font-size: 1.8rem;
+  }
+  
+  .name {
+    font-size: 2.2rem;
+  }
+  
+  .bio {
+    font-size: 0.9rem;
+    max-width: 90%;
+    margin: 1rem auto 0;
+  }
+  
+  /* 3. Fix for resume page bullet points */
+  .experience-item {
+    grid-template-areas:
+      "title date"
+      "subtitle subtitle"
+      "details details";
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .experience-item p.job-title::before {
+    left: -100%; /* Adjust for mobile */
+  }
+  
+  .experience-item ul.job-details {
+    width: calc(100% - 1rem);
+    padding-right: 0.5rem;
+  }
+  
+  .experience-item .job-date {
+    font-size: 0.8rem;
+  }
+  
+  /* 4. Fix for About Me page spacing */
+  body.aboutme main.section .container {
+    padding: 0 var(--mobile-padding);
+  }
+  
+  body.aboutme .article-content.about {
+    padding: 1.5rem;
+    max-width: 90%;
+    font-size: 0.9rem;
+  }
+  
+  /* Section title adjustments */
+  .section-title {
+    font-size: 1.8rem;
+    margin: 1.5rem 0 2rem;
+  }
 }
-.profile-pic {
-  width: 120px !important;
-  height: 120px !important;
-  border-radius: 50% !important;
-  overflow: hidden !important;
-  margin-bottom: 2rem !important;
-}
-.profile-pic img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  border-radius: 50% !important;
+
+/* Small phone screens */
+@media (max-width: 480px) {
+  :root {
+    --mobile-padding: 1rem;
+  }
+  
+  /* Further reduce sizes on smaller screens */
+  .profile-pic {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  .greeting {
+    font-size: 1.5rem;
+  }
+  
+  .name {
+    font-size: 1.8rem;
+  }
+  
+  .bio {
+    font-size: 0.85rem;
+    max-width: 95%;
+  }
+  
+  /* Adjust article layout for very small screens */
+  .writing-grid .article-image {
+    max-width: 250px;
+  }
+  
+  /* Adjust navigation padding */
+  nav.desktop a {
+    margin: 0 0.5rem;
+    font-size: 0.7rem;
+  }
+  
+  /* Experience items on small screens */
+  .experience-item {
+    grid-template-areas:
+      "title"
+      "date"
+      "subtitle"
+      "details";
+    grid-template-columns: 1fr;
+  }
+  
+  .experience-item .job-date {
+    justify-self: start;
+    margin-top: 0.25rem;
+  }
 }
