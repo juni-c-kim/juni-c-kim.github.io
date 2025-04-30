@@ -216,17 +216,45 @@ nav.mobile {
   justify-content: center;
   align-items: center;
 }
-/* Title square */
+/* Title square - creating a text-based square without visible borders */
 .writing-grid .article-content .article-title {
   width: 200px;
   height: 200px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  border: 1px solid #e9ecef;
-  border-radius: 0.5rem;
+  justify-content: space-between;
   box-sizing: border-box;
+  /* Remove the border */
+  position: relative;
+}
+
+/* Style for article title links */
+.writing-grid .article-content .article-title a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* Style for text that forms the square */
+.writing-grid .article-content .article-title span {
+  display: block;
+  width: 100%;
+  text-align: justify;
+  text-align-last: justify;
+  word-spacing: 0.5em;
+  line-height: 1.2;
+  font-size: 1.2rem;
+}
+
+/* First and last lines get special spacing */
+.writing-grid .article-content .article-title span:first-child,
+.writing-grid .article-content .article-title span:last-child {
+  word-spacing: normal;
+  text-align: center;
 }
 .writing-grid > .article:nth-child(even) {
   flex-direction: row-reverse !important;
@@ -236,9 +264,12 @@ nav.mobile {
     flex-direction: column !important;
   }
   .writing-grid .article-content .article-title {
-    width: 100%;
-    height: auto;
-    padding: 1rem;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  .writing-grid .article-content .article-title span {
+    font-size: 1rem;
   }
 }
 main.section .container {
@@ -273,6 +304,14 @@ body.aboutme .article-content.about {
   font-size: 1rem;
   line-height: 1.6;
   text-align: center;
+}
+
+/* Ensure container takes full height on about page */
+body.aboutme .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 body.aboutme .article-content.about p {
