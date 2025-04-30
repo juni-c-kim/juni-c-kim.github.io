@@ -117,26 +117,37 @@ nav.mobile {
 /* ===== Resume Section (resume.html) ===== */
 .section-title {
   font-size: 2rem;
-  margin: 2rem 0 1rem;
+  margin: 2rem 0 2rem;
   font-weight: 300;
   text-align: center;
 }
 .experience-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  border-left: 2px solid #e9ecef;
-  padding-left: 1.5rem;
+  margin-bottom: 3rem;
 }
-.job-title {
-  font-size: 1.25rem;
+.experience-item p.job-title {
+  font-size: 0.875rem;
   font-weight: 500;
-  margin-bottom: 0.25rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
-.company {
-  color: #6c757d;
-  margin-bottom: 0.5rem;
+.experience-item strong {
+  display: inline-block;
+  position: relative;
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.experience-item strong::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 1px;
+  background: #212529;
 }
 .job-date {
   color: #6c757d;
@@ -151,60 +162,56 @@ nav.mobile {
   margin-bottom: 0.5rem;
 }
 
-/* ——————————————————————————————————————————————
-   Writing Section: make images big, square & punchy
-   —————————————————————————————————————————————— */
+/* ===== Writing Section (writing.html) ===== */
 .writing-grid {
   display: flex;
   flex-direction: column;
-  gap: 3rem;           /* more vertical space between items */
+  gap: 3rem;
   margin-top: 2rem;
 }
-
 .writing-grid .article {
   display: flex;
   align-items: center;
   gap: 2rem;
-  /* remove the white box background */
   background: none;
   box-shadow: none;
-  padding: 0;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid #e9ecef;
 }
-
+.writing-grid .article:last-child {
+  border-bottom: none;
+}
 .writing-grid .article-image {
-  /* fixed square, adjust as you like */
-  flex: 0 0 350px;     /* image always 350px wide */
-  aspect-ratio: 1 / 1; /* force 1:1 height */
+  flex: 0 0 350px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 0.5rem;
   background-color: #e9ecef;
 }
-
 .writing-grid .article-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .writing-grid .article-content {
-  /* make the text take up the remaining space */
   flex: 1;
-  padding-top: 0.5rem; /* align content vertically with image center */
+  padding-top: 0.5rem;
 }
-
-/* ensure the entire grid sits nicely within your page margins */
+.writing-grid > .article:nth-child(even) {
+  flex-direction: row-reverse !important;
+}
+@media (max-width: 767px) {
+  .writing-grid .article {
+    flex-direction: column !important;
+  }
+}
 main.section .container {
   max-width: 900px;
   margin: 0 auto;
 }
 
-.writing-grid > .article:nth-child(even) {
-  flex-direction: row-reverse !important;  /* force the flip */
-}
-
 /* ===== About Me Section (aboutme.html) ===== */
 .article-content.about {
-  /* fill viewport minus header and center content */
   height: calc(100vh - 4rem);
   display: flex;
   flex-direction: column;
@@ -212,38 +219,16 @@ main.section .container {
   justify-content: center;
   max-width: 600px;
   margin: 0 auto;
-  padding: 0 1rem;
-  color: #495057;
-  font-size: 1rem;
-  line-height: 1.6;
-  text-align: center !important;
-}
-.article-content.about p {
-  margin-bottom: 1.5rem;
-}
-.article-content.about p:last-child {
-  margin-bottom: 0;
-}
-
-body.aboutme .article-content {
-  /* fill viewport minus header and center content */
-  height: calc(100vh - 4rem);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1rem 2rem;
   color: #495057;
   font-size: 1rem;
   line-height: 1.6;
   text-align: center;
 }
-body.aboutme .article-content p {
+.article-content.about p {
   margin-bottom: 1.5rem;
 }
-body.aboutme .article-content p:last-child {
+.article-content.about p:last-child {
   margin-bottom: 0;
 }
 
