@@ -1,5 +1,9 @@
 /* style.css - Unified styling for index.html, resume.html, writing.html, and aboutme.html */
 
+:root {
+  --page-padding: 1rem;
+}
+
 /* ===== Global Reset & Base ===== */
 * {
   margin: 0;
@@ -33,7 +37,7 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--page-padding);
 }
 
 /* ===== Header & Navigation ===== */
@@ -69,7 +73,7 @@ nav.mobile {
 
 /* ===== Section Spacing ===== */
 .section {
-  padding: 3rem 1rem;
+  padding: 3rem var(--page-padding);
 }
 
 /* ===== Home/Profile Section (index.html) ===== */
@@ -133,11 +137,23 @@ nav.mobile {
 }
 .experience-item p.job-title {
   grid-area: title;
+  position: relative;
   font-size: 0.875rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin: 0;
+  padding-right: 2rem;
+}
+.experience-item p.job-title::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100vw - (100% + var(--page-padding) * 2));
+  height: 1px;
+  background: #212529;
 }
 .experience-item .job-date {
   grid-area: date;
@@ -147,23 +163,10 @@ nav.mobile {
 }
 .experience-item strong {
   grid-area: subtitle;
-  position: relative;
-  padding-left: 1.5rem;
+  display: block;
+  margin: 0.5rem 0;
   font-size: 1rem;
   font-weight: 300;
-  margin: 0.5rem 0 0;
-}
-.experience-item strong::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100vw;
-  max-width: calc(100% - 1.5rem);
-  height: 1px;
-  background: #212529;
-  z-index: -1;
 }
 .experience-item ul.job-details {
   grid-area: details;
@@ -243,7 +246,7 @@ main.section .container {
 }
 
 /* ===== About Me Section (aboutme.html) ===== */
-.article-content.about {
+body.aboutme .article-content.about {
   height: calc(100vh - 4rem);
   display: flex;
   flex-direction: column;
@@ -251,16 +254,16 @@ main.section .container {
   justify-content: center;
   max-width: 600px;
   margin: 0 auto;
-  padding: 0 1rem 2rem;
+  padding: 0 var(--page-padding) 2rem;
   color: #495057;
   font-size: 1rem;
   line-height: 1.6;
   text-align: center;
 }
-.article-content.about p {
+body.aboutme .article-content.about p {
   margin-bottom: 1.5rem;
 }
-.article-content.about p:last-child {
+body.aboutme .article-content.about p:last-child {
   margin-bottom: 0;
 }
 
