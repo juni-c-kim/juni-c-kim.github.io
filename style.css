@@ -182,42 +182,54 @@ nav.mobile {
   margin-bottom: 0.5rem;
 }
 
-/* ===== Writing Section (writing.html) ===== */
+/* Updated Writing Section (writing.html) Styles */
+
 .writing-grid {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   margin-top: 2rem;
 }
+
 .writing-grid .article {
   display: flex;
   align-items: center;
   gap: 2rem;
   background: none;
   box-shadow: none;
-  padding: 0 0 1rem;
+  padding: 0 0 3rem; /* Increased padding at bottom */
+  margin-bottom: 3rem; /* Added consistent margin */
   border-bottom: 1px solid #e9ecef;
+  position: relative; /* For positioning the divider line */
 }
+
 .writing-grid .article:last-child {
   border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
+
 .writing-grid .article-image {
   flex: 0 0 350px;
   aspect-ratio: 1 / 1;
   overflow: hidden;
+  border-radius: 0.5rem;
   background-color: #e9ecef;
 }
+
 .writing-grid .article-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .writing-grid .article-content {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 /* Title square - creating a text-based square without visible borders */
 .writing-grid .article-content .article-title {
   width: 200px;
@@ -227,7 +239,6 @@ nav.mobile {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  /* Remove the border */
   position: relative;
 }
 
@@ -258,14 +269,73 @@ nav.mobile {
   word-spacing: normal;
   text-align: center;
 }
+
 .writing-grid > .article:nth-child(even) {
   flex-direction: row-reverse !important;
 }
-main.section .container {
-  max-width: 900px;
-  margin: 0 auto;
+
+/* Mobile styles for writing page */
+@media (max-width: 767px) {
+  .writing-grid .article {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .writing-grid .article:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .writing-grid .article-image {
+    width: 280px;
+    height: 280px;
+    flex: 0 0 auto;
+  }
+  
+  .writing-grid .article-content {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  /* Maintain square shape on mobile */
+  .writing-grid .article-content .article-title {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
+  
+  .writing-grid .article-content .article-title span {
+    font-size: 1rem;
+  }
 }
 
+/* Small phone screens */
+@media (max-width: 480px) {
+  .writing-grid .article {
+    gap: 1.5rem;
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .writing-grid .article-image {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .writing-grid .article-content .article-title {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .writing-grid .article-content .article-title span {
+    font-size: 0.9rem;
+  }
+}
 /* ===== About Me Section (aboutme.html) ===== */
 /* Fixed about me content positioning */
 body.aboutme {
