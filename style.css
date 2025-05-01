@@ -360,9 +360,9 @@ body.aboutme::after {
 body.aboutme::before {
   width: 100vw;
   height: 100vw;
-  background: radial-gradient(circle, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 70%);
-  top: -30vw;
-  right: -30vw;
+  background: radial-gradient(circle, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0) 70%);
+  top: -10vw;
+  right: -10vw;
   filter: blur(100px);
 }
 
@@ -371,8 +371,8 @@ body.aboutme::after {
   width: 60vw;
   height: 60vw;
   background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0) 70%);
-  bottom: -20vw;
-  left: -20vw;
+  bottom: -10vw;
+  left: -10vw;
   filter: blur(80px);
 }
 /* Ensure the container in the header behaves normally on about page */
