@@ -271,7 +271,7 @@ nav.mobile {
 }
 
 .writing-grid > .article:nth-child(even) {
-  flex-direction: row-reverse !important;
+  flex-direction: row-reverse;
 }
 
 /* Mobile styles for writing page */
