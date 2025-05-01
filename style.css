@@ -345,36 +345,6 @@ body.aboutme {
   position: relative;
   overflow-x: hidden;
 }
-
-/* Aura effects for about me page */
-body.aboutme::before,
-body.aboutme::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Main aura in top-right */
-body.aboutme::before {
-  width: 100vw;
-  height: 100vw;
-  background: radial-gradient(circle, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0) 70%);
-  top: -10vw;
-  right: -10vw;
-  filter: blur(100px);
-}
-
-/* Secondary aura in bottom-left */
-body.aboutme::after {
-  width: 60vw;
-  height: 60vw;
-  background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0) 70%);
-  bottom: -10vw;
-  left: -10vw;
-  filter: blur(80px);
-}
 /* Ensure the container in the header behaves normally on about page */
 body.aboutme header .container {
   height: 100%;
