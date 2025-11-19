@@ -1,25 +1,30 @@
+I want to make some updates to my website. First, by removing the links here: 
+
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Juni Kim – Home</title>
+  <!-- Google Fonts preload + embed -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="home-page">
-  <!-- Site Header -->
+<body>
+   <!-- Site Header -->
   <header>
     <div class="container">
       <nav class="desktop">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html"  class="active">Home</a>
         <a href="resume.html">Resume</a>
         <a href="mywriting.html">Writing</a>
         <a href="aboutme.html">About</a>
       </nav>
     </div>
+  </header>
     <!-- Mobile Navigation Panel -->
     <nav class="mobile">
       <a href="index.html" class="active">Home</a>
@@ -28,18 +33,27 @@
       <a href="aboutme.html">About Me</a>
     </nav>
   </header>
-
-  <!-- Hero Section with Dither Effect -->
-  <section class="hero">
-    <div class="hero-visualization"></div>
+  <!-- Landing / Profile Section -->
+  <section class="profile">
+    <div class="profile-pic">
+      <img src="assets/44ca465a09d0ad9a42a0b2a699364ed3.jpg" alt="Profile picture of Juni Kim">
+    </div>
+    <h1 class="greeting">
+      hi, my name is <span class="name pinyon-script-regular"> Juni </span>
+    </h1>
+    <p class="bio">
+  Working in product with a B.A. in Literary Journalism. Using story to bridge gaps between ideas and people.
+    </p>
     
-    <div class="hero-content">
-      <h1 class="greeting">
-        hi, my name is <span class="name pinyon-script-regular"> Juni </span>
-      </h1>
-      <p class="bio">
-        Working in product with a B.A. in Literary Journalism. Using story to bridge gaps between ideas and people.
-      </p>
+    <!-- Social Media Links -->
+    <div class="social-links" style="margin-top: 2rem;">
+      <h3 style="text-align: center; margin-bottom: 0.5rem; font-size: 0.9rem;">rabbit holes documented on:</h3>
+      <div class="social-icons" style="display: flex; gap: 1rem; justify-content: center;">
+        <a href="https://www.instagram.com/juniscloud/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; font-size: 0.8rem;">Instagram</a>
+        <a href="https://www.tiktok.com/@juniscloud" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; font-size: 0.8rem;">TikTok</a>
+        <a href="https://www.youtube.com/@juniscloud" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; font-size: 0.8rem;">YouTube</a>
+        <a href="https://x.com/astraljuni" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; font-size: 0.8rem;">X</a>
+      </div>
     </div>
   </section>
 </body>
