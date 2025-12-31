@@ -28,10 +28,11 @@ img {
 }
 
 /* ===== Google Font Class ===== */
-.cormorant-garamond {
+css.greeting {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 0.75rem;
   font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
-  font-style: normal;
 }
 
 /* ===== Container Utility ===== */
