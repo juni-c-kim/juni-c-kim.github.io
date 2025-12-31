@@ -116,6 +116,8 @@ nav.mobile {
 }
 .name {
   font-size: 3rem;
+  font-family: 'Cormorant Garamond', serif;
+}
 }
 .bio {
   max-width: 600px;
