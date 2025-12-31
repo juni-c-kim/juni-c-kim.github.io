@@ -32,7 +32,7 @@ img {
   font-size: 2.5rem;
   font-weight: 300;
   margin-bottom: 0.75rem;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: serif;
 }
 
 /* ===== Container Utility ===== */
@@ -108,7 +108,7 @@ nav.mobile {
   margin-bottom: 0.75rem;
 }
 .name {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: serif;
 }
 }
 .bio {
@@ -128,7 +128,7 @@ nav.mobile {
   margin: 2rem 0 3rem;
   font-weight: 300;
   text-align: center;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: serif;
 }
 .experience-item {
   display: grid;
