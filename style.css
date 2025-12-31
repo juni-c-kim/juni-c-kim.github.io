@@ -101,13 +101,6 @@ nav.mobile {
   height: 100% !important;
   object-fit: cover !important;
   border-radius: 50% !important;
-  /* Dither effect using CSS filters */
-  filter: grayscale(100%) contrast(200%) brightness(120%);
-  transition: filter 0.3s ease;
-}
-/* Optional: Remove dither on hover to show original image */
-.profile-pic:hover img {
-  filter: none;
 }
 .greeting {
   font-size: 2.5rem;
@@ -135,6 +128,7 @@ nav.mobile {
   margin: 2rem 0 3rem;
   font-weight: 300;
   text-align: center;
+  font-family: 'Cormorant Garamond', serif;
 }
 .experience-item {
   display: grid;
