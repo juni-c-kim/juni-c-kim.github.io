@@ -28,9 +28,9 @@ img {
 }
 
 /* ===== Google Font Class ===== */
-.pinyon-script-regular {
-  font-family: 'Pinyon Script', cursive;
-  font-weight: 400;
+.cormorant-garamond {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
   font-style: normal;
 }
 
