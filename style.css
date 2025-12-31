@@ -28,7 +28,7 @@ img {
 }
 
 /* ===== Google Font Class ===== */
-css.greeting {
+.greeting {
   font-size: 2.5rem;
   font-weight: 300;
   margin-bottom: 0.75rem;
