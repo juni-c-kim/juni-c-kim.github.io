@@ -103,12 +103,15 @@ nav.mobile {
   border-radius: 50% !important;
 }
 .greeting {
-  font-size: 2.5rem;
-  font-weight: 300;
+  font-size: 2rem;
+  font-weight: 200;
   margin-bottom: 0.75rem;
 }
 .name {
   font-family: serif;
+ font-size: 2rem;
+  font-weight: 200;
+}
 }
 }
 .bio {
