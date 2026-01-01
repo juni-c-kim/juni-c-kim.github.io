@@ -29,7 +29,7 @@ img {
 
 /* ===== Google Font Class ===== */
 .greeting {
-  font-size: 2rem;  /* ← Same as .section-title */
+  font-size: 1.5rem;  /* ← Same as .section-title */
   font-weight: 300;
   margin-bottom: 0.75rem;
   font-family: serif;
@@ -126,7 +126,7 @@ nav.mobile {
 
 /* ===== Resume Section (resume.html) ===== */
 .section-title {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 2rem 0 6rem;
   font-weight: 300;
   text-align: center;
